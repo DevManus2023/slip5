@@ -4,18 +4,18 @@
 #include<sys/stat.h>
 #include<time.h>
 #include<stdlib.h>
-structfilelist
-{
-charfname[100];
-intfsize;
+struct filelist{
+char fname[100];
+int fsize;
 };
-int main(intargc,char *argv[])
+int main(int argc,char *argv[])
 {
 DIR *dp;
-inti,j,k;
-structdirent *ep;
-struct stat sb;charmon[100];
-structfilelist f1[100],temp;
+int i,j,k;
+struct dirent *ep;
+struct stat sb;
+char mon[100];
+struct filelist f1[100],temp;
 j=0;
 for(i=1;i<argc;i++)
 {
